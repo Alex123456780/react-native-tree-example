@@ -8,4 +8,4 @@
 
 Визуальное представление:
 
-![visual](https://im2.ezgif.com/tmp/ezgif-2-a4125d7dce99.gif)
+![visual](https://s3.gifyu.com/images/exampleebec0f835f02a0f5.gif)
