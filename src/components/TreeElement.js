@@ -19,8 +19,11 @@ import { emptyFunc } from './../lib/helpers';
 // На данный момент элементы разных уровней визуально отличаются только отступом слева (чем глубже уровень, тем больше
 // этот отступ).
 // Мысли по даннмоу поводу:
-// - Мемоизация (объект с соответствиями типа level-color, если нет, то генерируем, например, через Math.random)
-// - https://medium.com/@dsabar/picking-non-random-colours-for-our-ui-a70bb9c2f938
+// Мемоизация - объект с соответствиями типа level-color, если нет, то генерируем, например, через Math.random. Однако
+// нельзя забывать, что цвета должны быть разными на каждом из уровней, а случайный выбор цвета, без каких-либо условий
+// и ограничений, может рано или поздно вернуть уже использованный ранее цвет. В следующей реализации решается проблема
+// возможного повторения цветов:
+// https://medium.com/@dsabar/picking-non-random-colours-for-our-ui-a70bb9c2f938
 export default class TreeElement extends PureComponent {
   static propTypes = {
     margin_count: PropTypes.number,
